@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-course-demo';
+
+  pages = [
+    'articles',
+    'categories',
+    'about',
+  ];
+
+  changeMenu() {
+    this.pages = [
+      ...this.pages,
+      'profile' + Date.now(),
+    ];
+  }
+
+  what($event) {
+    console.log($event);
+  }
 }
